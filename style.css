@@ -142,5 +142,67 @@ body {
   background: black;
 }
 
+#contact {
+  height: 500px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 30px;
+}
 
+@keyframes revertCursor {
+  0% {
+    cursor: url('path/to/clicked_crosshair.png'), auto;
+  }
+  100% {
+    cursor: url('path/to/crosshair.png'), auto;
+  }
+}
+
+#contact .game_cta button {
+  height: 40px;
+  width: 300px;
+  margin-left: 50px;
+  background: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  cursor: url('./Images/dartboard_Unselected.png'), pointer;
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+#contact .game_cta button:active {
+  cursor: url('./Images/dartboard.png'), crosshair;
+}
+
+#contact .game_cta button:active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: revertCursor 2s forwards; /* Change '2s' to the desired duration */
+}
+
+@keyframes revertCursor {
+  0% {
+    cursor: url('./Images/dartboard.png'), crosshair;
+  }
+  100% {
+    cursor: url('./Images/dartboard_Unselected.png'), pointer;
+  }
+}
+
+#contact .game_cta button:hover {
+  color: #454545;
+}
 
