@@ -86,7 +86,6 @@ body {
 }
 
 #showcase {
-  height: 1000px;
   color: white;
   padding: 30px;
 }
@@ -103,7 +102,6 @@ body {
 
 #showcase > .game_info > div {
   display: flex;
-  height: 300px;
 }
 
 #showcase > .game_info .game_tile_container {
@@ -111,7 +109,7 @@ body {
 }
 
 #showcase > .game_info  .device_tags {
-  bottom: 10px;
+  bottom: 20px;
   right: 10px;
   position: absolute;
 }
@@ -138,6 +136,7 @@ body {
 #showcase .game_description p {
   margin: 0px;
   font-weight: 300;
+  font-size: 16px;
 }
 
 #showcase .game_cta {
