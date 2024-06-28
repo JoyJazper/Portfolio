@@ -106,6 +106,24 @@ body {
   height: 300px;
 }
 
+#showcase > .game_info .game_tile_container {
+  position: relative;
+}
+
+#showcase > .game_info  .device_tags {
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+#showcase > .game_info  .device_tags span {
+  background: #2b2b2b;
+  margin: 0px 5px;
+  padding: 2px 5px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
 #showcase .game_info img {
   height: 300px;
   width: 475px;
