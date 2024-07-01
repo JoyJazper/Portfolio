@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -11,7 +15,6 @@ body {
   background-color: #111;
   color: white;
   align-items: center;
-  padding-bottom: 50px;
 }
 
 
@@ -51,11 +54,6 @@ body {
 #header_nav a {
   text-decoration: none;
   color: white;
-}
-
-#header_nav a.active {
-  text-decoration-line: underline;
-  -moz-text-decoration-line: underline;
 }
 
 #title {
@@ -103,6 +101,7 @@ body {
   #tagline_text p1 {
     display: block;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -113,6 +112,13 @@ body {
   transform: rotateY(180deg);
 }
 
+@media screen and (max-width: 600px) {
+  #profile_photo > img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
 #showcase {
   justify-content: center;
   max-width: 1200px;
@@ -120,9 +126,20 @@ body {
 }
 
 #showcase h1 {
+  font-size: 24px;
   text-align: center;
   font-weight: 300;
   letter-spacing: 8px;
+}
+
+#showcase > h1 {
+  font-size: 32px;
+  margin-top: 100px;
+}
+
+#showcase h1 > a {
+  text-decoration: none;
+  color: white;
 }
 
 #showcase > .game_info {
@@ -227,66 +244,33 @@ body {
 }
 
 #contact {
-  height: 500px;
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 22px;
+  width: 100%;
+  background: black;
+  padding-bottom: 200px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#contact > h1 {
+  text-align: center;
   font-weight: 300;
-  font-style: italic;
-  padding: 0 30px;
+  letter-spacing: 8px;
+  font-size: 32px;
+  margin: 100px 0px;
 }
 
-@keyframes revertCursor {
-  0% {
-    cursor: url('path/to/clicked_crosshair.png'), auto;
-  }
-  100% {
-    cursor: url('path/to/crosshair.png'), auto;
-  }
+#contact h1 > a {
+  text-decoration: none;
+  color: white;
 }
 
-#contact .game_cta button {
-  height: 40px;
-  width: 300px;
-  margin-left: 50px;
+#contact button {
   background: none;
   border: none;
   color: white;
-  border-radius: 5px;
-  font-size: 20px;
+  font-family: inherit;
+  font-size: 24px;
+  cursor: pointer;
   font-weight: 300;
   letter-spacing: 4px;
-  cursor: url('./Images/dartboard_Unselected.png'), pointer;
-  position: relative; /* Needed for pseudo-element positioning */
 }
-
-#contact .game_cta button:active {
-  cursor: url('./Images/dartboard.png'), crosshair;
-}
-
-#contact .game_cta button:active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: revertCursor 2s forwards; /* Change '2s' to the desired duration */
-}
-
-@keyframes revertCursor {
-  0% {
-    cursor: url('./Images/dartboard.png'), crosshair;
-  }
-  100% {
-    cursor: url('./Images/dartboard_Unselected.png'), pointer;
-  }
-}
-
-#contact .game_cta button:hover {
-  color: #454545;
-}
-
