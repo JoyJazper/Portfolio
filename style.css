@@ -12,7 +12,7 @@ body {
   font-style: normal;
   letter-spacing: 0.8px;
   margin: 0px;
-  background-color: #111;
+  background-color: #090909;
   color: white;
   align-items: center;
 }
@@ -89,7 +89,6 @@ body {
   align-items: center;
   font-size: 22px;
   font-weight: 300;
-  font-style: italic;
   padding: 0px 30px;
 }
 
@@ -102,6 +101,7 @@ body {
     display: block;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 20px;
   }
 }
 
@@ -229,17 +229,25 @@ body {
   }
 
   #showcase .game_description {
+    text-align: left;
     margin: 0px;
   }
 
+  #showcase .game_description > h1 {
+    text-align: left;
+  }
+
   #showcase .game_cta {
-    justify-content: space-around;
+    justify-content: left;
+    margin-top: 10px;
   }
 
   #showcase .game_cta button {
     width: unset;
     margin-left: 0px;
-    background-color: #1b1b1b;
+    margin-right: 10px;
+    font-size: 16px;
+    border-right: 1px solid;
   }
 }
 
@@ -269,7 +277,7 @@ body {
   border: none;
   color: white;
   font-family: inherit;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   font-weight: 300;
   letter-spacing: 4px;
